@@ -10,6 +10,8 @@
         var pl = playerChoice();
         var pc = computerPlay();
         var result = gamePlay(pl,pc);
+
+
         console.log(pl);
         console.log(pc);
         console.log(result);
@@ -45,7 +47,7 @@
                 }else{
                     return 'Ha, gotcha!'
                 }
-            }else{
+            }else if(player == 'SCISSORS'){
                 if(computer == 'ROCK'){
                     return 'SUCKEEER';
                 }else if(computer == 'PAPER'){
@@ -53,6 +55,8 @@
                 }else{
                     return 'Stop imitating me!'
                 }
+            }else{
+                return 'Invalid Entry';
             }
         }
         </script>
