@@ -9,13 +9,16 @@
     <body>
         <div class="play-table">
             <div class="player-choice"></div>
-            <!--It`s necessary to add a showdown button here-------------------------------------------------------------------->
+            <button type="button" class='showdown-button'>Showdown!</button>
             <div class="computer-choice"></div>
         </div>
         <div class="player-table">
             <div class="rock" onclick="playerChoice('ROCK')"></div>
             <div class="paper" onclick="playerChoice('PAPER')"></div>
             <div class="scissors" onclick="playerChoice('SCISSORS')"></div>
+        </div>
+        <div class="reset-button" onclick="resetGame()">
+            Reset
         </div>
         <script src="index.js" charset="utf-8"></script>
     </body>
