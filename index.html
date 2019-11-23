@@ -1,64 +1,22 @@
 <!DOCTYPE html>
+<!--Se lembre de fazer com o data- tambem!!!-------------------------------------------------------------->
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link rel="stylesheet" href="./index.css">
     </head>
     <body>
-        <script type="text/javascript">
-
-        var pl = playerChoice();
-        var pc = computerPlay();
-        var result = gamePlay(pl,pc);
-
-
-        console.log(pl);
-        console.log(pc);
-        console.log(result);
-
-        function computerPlay (){
-            let i = Math.floor(Math.random()*4);
-            if (i==0){
-                return 'ROCK';
-            }else if(i==1){
-                return 'PAPER';
-            }else{
-                return 'SCISSORS';
-            }
-        }
-        function playerChoice() {
-            let choice = prompt("Choose -> Rock, Paper or Scisors ?");
-            return choice.toUpperCase();
-        }
-        function gamePlay(player,computer){
-            if (player == 'ROCK'){
-                if(computer == 'ROCK'){
-                    return 'Draw';
-                }else if(computer == 'PAPER'){
-                    return 'You Suck';
-                }else{
-                    return 'That luck Motherfucker'
-                }
-            }else if(player == 'PAPER'){
-                if(computer == 'ROCK'){
-                    return 'You won';
-                }else if(computer == 'PAPER'){
-                    return 'Draw Bitch';
-                }else{
-                    return 'Ha, gotcha!'
-                }
-            }else if(player == 'SCISSORS'){
-                if(computer == 'ROCK'){
-                    return 'SUCKEEER';
-                }else if(computer == 'PAPER'){
-                    return 'Lucky Shot';
-                }else{
-                    return 'Stop imitating me!'
-                }
-            }else{
-                return 'Invalid Entry';
-            }
-        }
-        </script>
+        <div class="play-table">
+            <div class="player-choice"></div>
+            <!--It`s necessary to add a showdown button here-------------------------------------------------------------------->
+            <div class="computer-choice"></div>
+        </div>
+        <div class="player-table">
+            <div class="rock" onclick="playerChoice('ROCK')"></div>
+            <div class="paper" onclick="playerChoice('PAPER')"></div>
+            <div class="scissors" onclick="playerChoice('SCISSORS')"></div>
+        </div>
+        <script src="index.js" charset="utf-8"></script>
     </body>
 </html>

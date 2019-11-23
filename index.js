@@ -1,9 +1,7 @@
 
-var pl = playerChoice();
-var pc = computerPlay();
-var result = gamePlay(pl,pc);
-console.log(result);
-
+var pl = '' ;
+var pc = '' ;
+//Function That sorts the computer choice--------------------------------------------------------------//
 function computerPlay (){
     let i = Math.floor(Math.random()*4);
     if (i==0){
@@ -14,11 +12,39 @@ function computerPlay (){
         return 'SCISSORS';
     }
 }
-function playerChoice() {
-    let choice = prompt("Choose -> Rock, Paper or Scisors ?");
-    return choice.toUpperCase();
+//Function that stores the player choice-----------------------------------------------------------------//
+function playerChoice(e) {
+    pl = e;
+    pc = computerPlay();
+    playGame(pl,pc);
+
 }
-function gamePlay(player,computer){
+//Function that makes the animations--------------------------------------------------------------------//
+function playGame(playerC,computerC){
+    const playerSide = document.querySelector('.player-choice');
+    if(playerC == 'ROCK'){
+        playerSide.classList.add('rock');
+    }else if(playerC == 'PAPER'){
+        playerSide.classList.add('paper');
+    }else{
+        playerSide.classList.add('scissors');
+    }
+    console.log(playerC);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//Function that settles the score-------------------------------------------------------------------------//
+function gameResult(player,computer){
     if (player == 'ROCK'){
         if(computer == 'ROCK'){
             return 'Draw';

@@ -1,0 +1,90 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    display: flex;
+    width: 1200px;
+    height: 600px;
+    border: solid black 1px;
+    margin : 10px ;
+    align-items: center;
+    flex-flow: column;
+}
+
+.play-table{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row;
+    border : solid black 5px;
+    border-radius: 10px;
+    width: 800px;
+    height: 532px;
+    margin: 10px;
+    background-image: url(table.jpeg);
+    background-size: 100%;
+}
+.play-table div {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: solid purple 5px;
+    margin: 5%;
+    border-radius: 20%;
+}
+.computer-choice{
+    background-image: url('int.png');
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.player-choice{
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.player-table{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin: auto;
+    border: solid black 1px;
+    align-items: center;
+    margin: 10px;
+
+}
+.player-table div {
+    border: solid black 1px;
+    width: 125px;
+    height: 125px;
+    margin: 20px;;
+}
+.rock {
+    background-image: url('rock.jpg');
+    background-size: 100%;
+}
+.rock:hover {
+    transform:scale(1.3);
+    transition: all 0.1s;
+}
+.scissors{
+    background-image:url('scissors.jpg');
+    background-size: 140%;
+    background-position: center;
+}
+.scissors:hover{
+    transform:scale(1.3);
+    transition: all 0.1s;
+}
+.paper{
+    background-image:url('paper.jpg');
+    background-size: 80%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.paper:hover{
+    transform:scale(1.3);
+    transition: all 0.1s;
+}
